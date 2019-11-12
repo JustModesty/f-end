@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning-note</title>
+    <base target="_blank">
+</head>
+<body>
+    <h1>前端学习笔记</h1>
+    <strong>锚点</strong><br>
+    <!-- todo: 以后要把这个”快速跳转到最后“弄成随网页动的”，始终位于界面的一个固定位置 -->
+    <a href="#end" target="_self">快速跳转到最后</a> 
+    <h2 id="html">HTML相关操作</h2>
+    <strong>锚点</strong><br>
+    <!-- 尽管base里面设置了target="_blank"使得所有a标签的默认都是_blank，这里可以手动设置成_self -->
+    <a href="#picture" target="_self">跳转到”图片操作“</a>
+    <br>
+    <a href="#link" target="_self">转到”跳转链接操作“</a>
+    <br>
+    <a href="#list" target="_self">跳转到“列表相关操作”</a>
+    <br>
+    <a href="#table" target="_self">跳转到“表格相关操作”</a>
+    <br>
+    <a href="#form" target="_self">跳转到“表单相关操作”</a>
+    <br>
+    <h3 id="picture">图片操作</h3>
+    <img src="static/timg.jpeg" alt="HTML&CSS" title="来源于百度图片" width="458" height="283">
+    <p><em>关于上面那张图片，记录一些img标签里面的属性技巧</em></p>
+    <ul>
+        <li>alt是图片加载出错的时候，给用户的友好提示</li>
+        <li>title：当鼠标放到图片上的时候，给用户显示的信息</li>
+        <li>加了width,height之后，尽管网速很慢，图片没加载完成，也会给图片预留固定的位置。防止页面内容的位置变动。可以在Chrome的Network里点击Online选择变换网速，比如Slow 3G测试慢网速状态</li>
+    </ul>
+    <h3 id="list">列表相关操作</h3>
+    <em>列表分无序列表、有序列表、定义列表</em>
+    <ul>
+        <li>ul包裹li实现无序列表，<strong>注意，ul和li之间不能有其他嵌套，li必须是ul的下以及嵌套。li里面可以有其他嵌套</strong></li>
+    </ul>
+    <ol>
+        <li>ol包裹li实现无序列表，一般用的比较少</li>
+    </ol>
+    <br>
+    接下来这个是定义列表，dl包裹的是定义列表
+    <br>
+    <dl>
+        <dt>HTML</dt>
+        <dd>超文本标记语言</dd>
+        <dt>CSS</dt>
+        <dd>层叠样式表</dd>
+        <dt>JavaScript</dt>
+        <dd>网页脚本语言</dd>
+    </dl>
+    <em>关于列表的操作，有个type值可以修改列表前面的符号，如小方格，小圆点等，不过一般都会用CSS重新修饰。</em>
+    <em>注：列表之间可以互相嵌套，形成多层级的列表</em>
+    <h3 id="table">表格相关操作</h3>
+    <em>table最外层包裹，然后每一行用tr包裹,定义这行是表头则接下来用th标签，如果这行是数据行，则用td标签</em>
+    <table>
+        <caption>caption标签添加表格标题</caption>
+        <tr>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>JavaScript</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+    
+    <br>
+    小技巧1：table标签里的border属性为表格添加边框
+    <br>
+    <table border="1">
+        <caption>caption标签添加表格标题</caption>
+        <tr>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>JavaScript</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <br>
+    小技巧2：table标签里的cellpadding属性调整单元格<strong>内</strong>的空间
+    <br>
+    <table border="1" cellpadding="30">
+        <caption>caption标签添加表格标题</caption>
+        <tr>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>JavaScript</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <br>
+    小技巧3：table标签里的cellspacing属性调整单元格<strong>之间</strong>的空间
+    <br>
+    <table border="1" cellpadding="30" cellspacing="30">
+        <caption>caption标签添加表格标题</caption>
+        <tr>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>JavaScript</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <br>
+    小技巧4：th或者td标签里的rowspan和colspan可以合并行和列
+    <br>
+    <table border="1" cellpadding="30" cellspacing="30">
+        <caption>caption标签添加表格标题</caption>
+        <tr>
+            <th colspan="2">HTML</th>
+            <th>CSS</th>
+            <th>JavaScript</th>
+        </tr>
+        <tr>
+            <td rowspan="2">0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <br>
+    小技巧5：align=“left"、"center"、"right"可以调整左中右，valign="top"、"middle"、"bottom"可以调整上中下;放置在tr th td都行。
+    <br>
+    <table border="1" cellpadding="30" cellspacing="30">
+        <caption>caption标签添加表格标题</caption>
+        <tr>
+            <th colspan="2" align="right">HTML</th>
+            <th>CSS</th>
+            <th>JavaScript</th>
+        </tr>
+        <tr valign="bottom">
+            <td rowspan="2">0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <h3 id="link">跳转链接操作</h3>
+    <a href="http://www.baidu.com" target="_blank">
+        <img src="static/baidu.jpeg" alt="这是一个跳转到百度的图片链接" title="来源于百度图片" width="200" height="80">
+    </a>
+    <p><em>关于跳转链接，记录一些a标签里面的属性技巧</em></p>
+    <ul>
+    <li>target标签如果是_blank，则在浏览器开启一个新的标签页; 如果不填，则默认是_self，是在本标签页进行跳转。</li>
+    <li>在head头部标签内添加base标签，并且base标签内填入属性target=”_blank“，即可以让所有a标签拥有开启新标签页的功能，不用手动一个个添加target</li>
+    以下是一个没有target的a标签，仍具有开启新标签页的功能。
+    </ul>
+    <br>
+    <a href="http://www.baidu.com">
+        <img src="static/baidu.jpeg" alt="这是一个跳转到百度的图片链接" title="来源于百度图片" width="200" height="80">
+    </a>
+
+    <h3 id="form">表单标签</h2>
+        <ul>
+            <li>form、input..
+                <br>
+                <ul>
+                    <li>
+                        input(单标签)标签有一个type属性，决定是什么控件。
+                        <br>
+                        <form>
+                            输入框：<input type="text">
+                            <br>
+                            密码框：<input type="password">
+                            <br>
+                            <input type="checkbox">苹果
+                            <input type="checkbox">香蕉
+                            <input type="checkbox">葡萄
+                        </form>
+                    </li>
+                </ul>
+            </li>
+            
+        </ul>
+
+    <br>
+    <h2 id="end">值得参考的链接</h2>
+    <ul>
+    <li><a href="http://www.html5star.com/manual/html5label-meaning/">HTML5 标签含义之元素周期表</a></li>
+    </ul>
+    <br>
+    
+</body>
+</html>
