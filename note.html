@@ -207,14 +207,36 @@
                     <li>
                         input(单标签)标签有一个type属性，决定是什么控件。
                         <br>
-                        <form>
-                            输入框：<input type="text">
+                        <form action="http://www.baidu.com" target="_self">
+                            <em>form表单里有个action属性，表单数据将发送给该链接，是提交表单之后的跳转链接</em>
+                            <br>
+                            type="text"的input输入框的placeholder属性可以设置提示语(输入为空的时候显示)，如”请输入用户名“
+                            <br>
+                            输入框：<input type="text" placeholder="请输入用户名">
                             <br>
                             密码框：<input type="password">
                             <br>
-                            <input type="checkbox">苹果
-                            <input type="checkbox">香蕉
+                            在input里加checked值可以让输入框被默认选中,加disabled值可以让输入框被禁止
+
+                            <br>
+                            <input type="checkbox" checked>苹果
+                            <input type="checkbox" disabled>香蕉
                             <input type="checkbox">葡萄
+                            <br>
+                            单选框
+                            <br>
+                            <input type="radio" name="gender" checked> 男
+                            <input type="radio" name="gender"> 女
+                            <br>
+                            <em>由于加了name属性，所以可以让name相同的radio类型的输入框具有单选的功能;name的值是自定义的。</em>
+                            <br>
+                            上传文件
+                            <br>
+                            <input type="file">
+                            <br>
+                            提交按钮和重置按钮
+                            <input type="submit">
+                            <input type="reset">
                         </form>
                     </li>
                 </ul>
