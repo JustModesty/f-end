@@ -234,9 +234,51 @@
                             <br>
                             <input type="file">
                             <br>
+                            上传文件添加多选功能,使用multiple
+                            <br>
+                            <input type="file" multiple>
+                            <br>
                             提交按钮和重置按钮
                             <input type="submit">
                             <input type="reset">
+                            <br>
+                            多行文本框
+                            <br>
+                            <textarea cols="30" rows="10"></textarea>
+                            <br>
+                            下拉菜单,默认是第一个option;添加option的selected属性可以更改默认值
+                            <br>
+                            <select>
+                                <option selected>请选择</option>
+                                <option>北京</option>
+                                <option>上海</option>
+                                <option>杭州</option>
+                            </select>
+                            <br>
+                            防止再次选择“请选择”选项框，可以在该option里添加disabled,此时无法再次选择
+                            <br>
+                            <select>
+                                <option selected disabled>请选择</option>
+                                <option>北京</option>
+                                <option>上海</option>
+                                <option>杭州</option>
+                            </select>
+                            <br>
+                            select框的size属性可以更改选项的显示数量
+                            <br>
+                            <select size="2">
+                                <option>北京</option>
+                                <option>上海</option>
+                                <option>杭州</option>
+                            </select>
+                            <br>
+                            select框的multiple属性可以使得选项框变成多选，可以鼠标滑动选择，也可以左键+Ctrl键进行隔行多选
+                            <br>
+                            <select multiple>
+                                <option>北京</option>
+                                <option>上海</option>
+                                <option>杭州</option>
+                            </select>
                         </form>
                     </li>
                 </ul>
