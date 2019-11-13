@@ -228,6 +228,11 @@
                             <input type="radio" name="gender" checked> 男
                             <input type="radio" name="gender"> 女
                             <br>
+                            由于此时的单选框只能点击小圆圈才激活，若想扩大点击的有效范围，可以与label标签搭配使用，注意：input标签的id属性的值要对应label标签的for属性的值
+                            <br>
+                            <input type="radio" name="gender" checked id="man"> <label for="man">男</label>
+                            <input type="radio" name="gender" id="woman"> <label for="woman">女</label>
+                            <br>
                             <em>由于加了name属性，所以可以让name相同的radio类型的输入框具有单选的功能;name的值是自定义的。</em>
                             <br>
                             上传文件
