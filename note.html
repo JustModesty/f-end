@@ -23,6 +23,8 @@
     <br>
     <a href="#form" target="_self">跳转到“表单相关操作”</a>
     <br>
+    <a href="#form_with_table" target="_self">跳转到"表单表格组合操作"</a>
+    <br>
     <h3 id="picture">图片操作</h3>
     <img src="static/timg.jpeg" alt="HTML&CSS" title="来源于百度图片" width="458" height="283">
     <p><em>关于上面那张图片，记录一些img标签里面的属性技巧</em></p>
@@ -290,7 +292,37 @@
             </li>
             
         </ul>
-
+    <br>
+    <h3 id="form_with_table">表格表单组合操作</h3>
+    表格是有嵌套规范的，而表单是没有嵌套规范的，所以把表单写在外部，表格写在内部。
+    <br>
+    表格的嵌套规范：tHead,tBody,tFoot.
+    <br>
+    <form action="">
+        <table border="1" cellpadding="30">
+            <tBody>
+                <tr>
+                    <td rowspan="4">总体信息</td>
+                    <td colspan="2" align="center">用户注册</td>
+                </tr>
+                <tr>
+                    <td align="right">用户名：</td>
+                    <td><input type="text" placeholder="请输入用户名"></td>
+                </tr>
+                <tr>
+                    <td align="right">密码：</td>
+                    <td><input type="password" placeholder="请输入密码"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset">
+                    </td>
+                </tr>
+            </tBody>
+        </table>
+    </form>
     <br>
     <h2 id="end">值得参考的链接</h2>
     <ul>
