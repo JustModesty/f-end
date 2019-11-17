@@ -32,7 +32,7 @@
     <br>
     <a href="#form_with_table" target="_self">跳转到"表单表格组合操作"</a>
     <br>
-    <a href="#div_span" target="_self">跳转到"div和span"</a>
+    <a href="#css_part" target="_self">跳转到"CSS部分"</a>
     <h3 id="picture">图片操作</h3>
     <img src="static/timg.jpeg" alt="HTML&CSS" title="来源于百度图片" width="458" height="283">
     <p><em>关于上面那张图片，记录一些img标签里面的属性技巧</em></p>
@@ -332,7 +332,7 @@
         </table>
     </form>
     <br>
-    <h2 id="css">CSS部分</h3>
+    <h2 id="css_part">CSS部分</h3>
     <div>
         <strong>CSS基础语法：</strong>
         <br>
@@ -440,6 +440,62 @@
     做一个小三角形:
     <br>
     <div style="width: 0px; height: 0px; background-color: white;border-top-color: transparent; border-top-width: 30px; border-top-style: solid; border-left-color: transparent; border-left-width: 30px; border-left-style: solid;  border-right-color: blue; border-right-width: 30px; border-right-style: solid;  border-bottom-color: transparent; border-bottom-width: 30px; border-bottom-style: solid;"></div>
+    <br>
+    <h4>CSS文字样式</h4>
+    font-family:字体类型
+    <br>
+    <div style="font-family: 宋体; background-color: white;">这是一个宋体的字体</div>
+    <br>
+    font-size:字体大小（默认是16px），字体大小一般为偶数，因为要对齐，奇数除以二会出现对齐的偏差
+    <br>
+    font-weight:字体粗细（只有两种，一种是正常(normal)，一种是加粗(bold)）。
+    <br>
+    font-style:字体样式（只有两种，一种是正常(normal)，一种是斜体(italic)）.注,oblique也表示斜体，不过用的比较少，了解即可。
+    <br>
+    <div style="color: blue; background-color: white;">color：设置字体颜色。</div>
+    <br>
+    <h4>CSS段落样式</h4>
+    text-decoration: 文本装饰(常用的有：下划线、删除线、上划线)
+    <br>
+    <div style="text-decoration:underline; background-color: white;">这是下划线</div>
+    <br>
+    <div style="text-decoration: overline; background-color: white;">这是上划线</div>
+    <br>
+    <div style="text-decoration:line-through; background: white;">这是删除线</div>
+    <br>
+    <div style="text-decoration: underline overline line-through; background-color: white;">多种修饰方式同时添加</div>
+    <br>
+    text-transform: 文本大小写（针对英文段落）。小写用lowercase,大写用uppercase,只针对首字母大写capitalize
+    <br>
+    <div style="text-transform: lowercase; background-color: white;">这是全小写ABCDEFGHIJKlmnopqrstuvwxyz</div>
+    <br>
+    <div style="text-transform: uppercase; background-color: white;">这是全大写ABCDEFGHIJKlmnopqrstuvwxyz</div>
+    <br>
+    <div style="text-transform: capitalize; background-color: white;">这是只针对首字母大写abcdefghijklmnopqrstuvwxyz</div>
+    <br>
+    text-indent: 文本缩进（主要针对首行缩进）
+    <div style="text-indent: 32px; background-color: white; width: 160px;">因为默认一个文字是16px,所以设置text-indent：32px则会在前面空2个文字的空格。</div>
+    <br>
+    缩进里面涉及一个em单位，1个em表示当前字体的大小
+    <br>
+    <div style="background-color: white; text-indent: 1em; width: 160px;">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+    <br>
+    text-align: 文本对齐方式，left、 right、 center、 justify(两端点对齐)
+    <br>
+    <br>
+    <div style="text-align: left; background-color: white; width: 480px;">这是一段左对  齐的文本这是一段左对齐的文本这是一段左对齐的文本 这是一段左对齐的文本这是一段左对齐的文本这是一段左对齐的文本这是一段左对齐的文本这是一段左对齐的文本 这是一段左对齐的文本这是一段左对齐的文本这是一段左对齐 的文本这是一段 左对齐的文本这是一段左对齐的 文本这是一段左对齐的文本这是一段左对齐的文本这是一段左对齐的文本这是一段左对齐的文本这是一段左 对齐的文本这是一段左 对齐的文本</div>
+    <br>
+    <br>
+    <div style="text-align: right; background-color: white; width: 480px;">这是一段右对齐的文本这是一段右对齐的文 本这是一段右对齐的文本这是一段右对齐的文本这是一段右对齐的文本这是一段右对齐的文本这是一段右对齐的文本这是一段右对齐的文本这 是一段右对齐的文本这是一段右对齐的文本 这是一段 右对齐的文本这是一段右对齐的文本这是一段右对齐的文本这 是一段右对齐的文本这是一段右对齐的文本这是一段右对齐的文本这是一段右对齐的文本这是一段右对齐的文本这是一段 右对齐的文本这是一 段右对齐的文本这是一段右对齐的文本</div>
+    <br>
+    <br>
+    <div style="text-align: center; background-color: white; width: 480px;">这是一段居中对齐的文 本这是一段居中对齐的文本这是一段居中对 的文本这是一段居中对齐的文本这是一段居中对齐的文本这是一段居中对齐的文本这是一段居中对齐的文本这是一段居中对齐的文本这是一段居中对齐的文本这是一 段居中对齐的文本这是一段居中 对齐的 文本这是一段居中对齐的文本这是一段居中对齐的文本这是一段居中对齐的文本这是一 段居中对齐的文 本这是一段居中对齐的文本</div>
+    <br>
+    <br>
+    <div style="text-align: justify; background-color: white; width: 480px;">这是一段两端对齐的文本这 是一段两端对齐的文本这是一段两端对齐的文本这是一段两端对齐的文本这是一段两端对齐的文本这是一段两端对齐的文 本这是一段 两端对齐的文本 这是一段两端对齐的文本这是一段两端对齐的文本这是一段两端对齐的 文本这是一段两端对齐的文本这是一段两端对齐的文本这是一段两端对齐的文本这是一段两端对齐的文本这 是一段两端对齐的文本这是一段两端对齐的文本这是一段两端 对齐的文本这是一段两端对 齐的文本这是一段两端对齐的文本</div>
+    <br>
+    <br>
+    
     <h2 id="end">值得参考的链接</h2>
     <ul>
     <li><a href="http://www.html5star.com/manual/html5label-meaning/">HTML5 标签含义之元素周期表</a></li>
